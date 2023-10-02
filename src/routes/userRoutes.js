@@ -11,6 +11,6 @@ router.post("/login", authControllers.login)
 router.get("/getAll", userControllers.getAll)
 router.get("/getById/:id", auth.validateToken, userControllers.getById)
 router.put("/updateById/:id", auth.validateToken, userControllers.updateById)
-router.delete("/removeById/:id", auth.validateToken, userControllers.removeById)
+router.delete("/removeById/:id", userControllers.removeById)
 
 export default router
