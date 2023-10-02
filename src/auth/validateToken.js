@@ -7,7 +7,7 @@ const validateToken = async (req, res, next) => {
         if(!req.headers.authorization){ 
             return res.status(401).json({
             statusCode: 401,
-            message: "Usuário Não Autorizado!",
+            message: "Usuário Não Encontrado!",
         })}
     console.log(req.headers);
     const token  = jwt.decode(req.headers.authorization.split("Bearer ")[1])
